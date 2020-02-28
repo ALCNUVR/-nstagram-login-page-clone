@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/dc0c634418.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Main Page-->
+    <header>
+        <div class="row no-gutters">
+            <div class="col-md-10 col-lg-8 col-xl-7" id="header-container">
+                <div class="img-container">
+                    <img src="/images/phones.png" alt="Phones.png">
+                </div>
+                <div class="form-container">
+                    <h1 class="mb-4">Instagram</h1>
+                    <p>Arkadaşlarının fotoğraf ve videolarını görmek için kaydol.</p>
+                    <button class="btn btn-primary mb-3" id="login-facebook">
+                        <a href="#">
+                            <i class="fab fa-facebook-square text-light pr-2"></i>
+                            <span class="text-light">Facebook ile Giriş Yap</span>
+                        </a>
+                    </button>
+                    <div>
+                        <span class="h-line"></span>
+                        <span class="text-muted h-text"> YA DA </span>
+                        <span class="h-line"></span>
+                    </div>
+                    <form id="form" class="mt-3">
+                        <input type="text" placeholder="Cep Telefonu Numarası veya E-posta" required class="input"
+                            id="phone">
+                        <input type="text" placeholder="Adı Soyadı" required class="input" id="name">
+                        <input type="text" placeholder="Kullanıcı adı" required class="input" id="username">
+                        <input type="password" placeholder="Şifre" required class="input" id="password">
+                        <br>
+                        <button class="btn btn-primary mt-2" id="submit-btn">Kaydol</button>
+                    </form>
+                    <p class="accept-form mt-3">Kaydolarak, <a href="https://help.instagram.com/581066165581870"
+                            target="_blank">Koşullar'ı, </a> <a href="https://help.instagram.com/519522125107875"
+                            target="_blank"> Veri İlkesi'</a>ni ve <a
+                            href="https://help.instagram.com/1896641480634370?ref=ig" target="_blank"> Çerezler
+                            İlkesi'</a>ni kabul etmiş olursun.
+                    </p>
+                    <div class="already-have-account">
+                        <span>Hesabın var mı?</span> <a
+                            href="https://www.instagram.com/accounts/login/?hl=tr&source=auth_switcher">Giriş yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Footer-->
+    <footer id="footer">
+        <div class="row no-gutters">
+            <div class="col-md-12 col-xl-10 col-lg-12" id="footer-container">
+                <ul>
+                    <li>
+                        <a href="#">hakkımızda</a>
+                    </li>
+                    <li>
+                        <a href="#">yardım</a>
+                    </li>
+                    <li>
+                        <a href="#">basın</a>
+                    </li>
+                    <li>
+                        <a href="#">api</a>
+                    </li>
+                    <li>
+                        <a href="#">iş fırsatları</a>
+                    </li>
+                    <li>
+                        <a href="#">gizlilik</a>
+                    </li>
+                    <li>
+                        <a href="#">koşullar</a>
+                    </li>
+                    <li>
+                        <a href="#">dizin</a>
+                    </li>
+                    <li>
+                        <a href="#">profiller</a>
+                    </li>
+                    <li>
+                        <a href="#">konu etiketleri</a>
+                    </li>
+                    <li>
+                        <a href="#">dil</a>
+                    </li>
+                </ul>
+
+                <div class="copyright text-muted">
+                    &copy; 2020 INSTAGRAM FROM FACEBOOK
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+
+        const inputs = document.querySelectorAll(`input`);
+        const phoneInput = document.querySelector("#phone");
+        const nameInput = document.querySelector("#name");
+        const userNameInput = document.querySelector("#username");
+        const passwordInput = document.querySelector("#password");
+        const submitBtn = document.querySelector("#submit-btn");
+
+        inputs.forEach(input => {
+            input.addEventListener("keyup", () => {
+
+                if (phoneInput.value !== "" && nameInput.value !== "" && userNameInput.value !== "" && passwordInput.value !== "") {
+                    submitBtn.style.opacity = "1"
+                }
+                else {
+                    submitBtn.style.opacity = ".4"
+                }
+            })
+        });
+
+    </script>
+
+</body>
+
+</html>
